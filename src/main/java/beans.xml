@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+    xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://cxf.apache.org/jaxws 
+    http://cxf.apache.org/schemas/jaxws.xsd
+    http://cxf.apache.org/jaxrs
+    http://cxf.apache.org/schemas/jaxrs.xsd">
+	<description>Rest CXF Test Spring</description>
+	
+	<import resource="classpath:META-INF/cxf/cxf.xml"/>
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>	
+
+
+	<!--Implementation for the webservice -->
+	<!-- http://localhost:8080/tcxfRestServer/cxfRest/userService/RESTService/doGet -->
+	<bean id="userService" class="com.tci.derek.tcxfRestServer.service.RESTServiceImpl" />
+	<jaxrs:server id="restServiceContainer" address="/userService"><!-- This is the url suffix, service destination -->
+	    <jaxrs:serviceBeans>
+	        <ref bean="userService" />
+	    </jaxrs:serviceBeans>
+	    <jaxrs:extensionMappings>
+	        <entry key="json" value="application/json" />
+	        <entry key="xml" value="application/xml" />
+	    </jaxrs:extensionMappings>
+	</jaxrs:server>	
+</beans>

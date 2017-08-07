@@ -1,0 +1,5 @@
+com\tci\derek\tcxfRestServer\service\RESTServiceImpl.class
+com\tci\derek\tcxfRestServer\serverEntity\Users.class
+com\tci\derek\tcxfRestServer\serverEntity\MapBean.class
+com\tci\derek\tcxfRestServer\service\RESTService.class
+com\tci\derek\tcxfRestServer\serverEntity\UserDTO.class
