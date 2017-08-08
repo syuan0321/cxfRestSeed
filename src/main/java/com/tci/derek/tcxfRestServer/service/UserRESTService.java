@@ -10,32 +10,23 @@ import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Request;
-import javax.ws.rs.core.UriInfo;
+import javax.ws.rs.core.Response;
 
 import com.tci.derek.tcxfRestServer.serverEntity.UserDTO;
 import com.tci.derek.tcxfRestServer.serverEntity.Users;
 
-@Path(value = "RESTService")
-public class RESTServiceImpl implements RESTService{
-	
-    @Context
-    private UriInfo uriInfo;
-    
-    @Context
-    private Request request;
-    
+@Path("/user")
+public class UserRESTService extends BaseService{
 	@GET
 	@Path("/doGet")
-	public String doGet() {
-		return "Derek REST Get service";
+	public Response doGet() {
+		return Response.status(Response.Status.OK).entity("Derek REST Get service").build();
 	}
 
 	@GET
 	@Path("/bean/{id}")
-	public UserDTO getBean(int id) {
+	public Response getBean(int id) {
         System.out.println("####getBean#####");
         System.out.println("id:" + id);
         System.out.println("Method:" + request.getMethod());
@@ -44,25 +35,25 @@ public class RESTServiceImpl implements RESTService{
         UserDTO user = new UserDTO();
         user.setId(id);
         user.setName("Derek");
-        return user;
+        return Response.status(Response.Status.OK).entity(user).build();
 	}
 	
 	@GET
 	@Path("/bean/aaa")
-	public UserDTO getBean() {
+	public Response getBean() {
 		System.out.println("####getBean#####");
 		System.out.println("Method:" + request.getMethod());
 		System.out.println("uri:" + uriInfo.getPath());
 		System.out.println(uriInfo.getPathParameters());
 		UserDTO user = new UserDTO();
-		user.setName("Derek");
-		return user;
+		user.setName("DerekLAAA");
+		return Response.status(Response.Status.OK).entity(user).build();
 	}
 
     @GET
     @Path("/list")
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public Users getList() {
+	public Response getList() {
         System.out.println("####getList#####");
         System.out.println("Method:" + request.getMethod());
         System.out.println("uri:" + uriInfo.getPath());
@@ -77,7 +68,7 @@ public class RESTServiceImpl implements RESTService{
         }
         Users users = new Users();
         users.setUsers(list);
-        return users;
+        return Response.status(Response.Status.OK).entity(users).build();
 	}
 
 	
@@ -106,5 +97,4 @@ public class RESTServiceImpl implements RESTService{
 	public void deleteData(int id) {
         System.out.println("#######deleteData#######" + id);
 	}
-
 }

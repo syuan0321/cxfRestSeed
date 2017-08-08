@@ -9,5 +9,5 @@ java.lang.NoClassDefFoundError: javax/servlet/ServletConfig
 5.Select "Maven Dependencies" from the Java Build Path Entries menu and click "Finish".
 *****************************************************************************************************
 URL:
-http://localhost:8080/tcxfRestServer/cxfRest/userService/RESTService/doGet
+http://localhost:8181/tcxfRestServer/cxfRest/user/list
 *****************************************************************************************************

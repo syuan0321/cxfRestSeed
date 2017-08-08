@@ -19,11 +19,11 @@
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>	
 
+	<bean id="userService" class="com.tci.derek.tcxfRestServer.service.UserRESTService" />
 
 	<!--Implementation for the webservice -->
-	<!-- http://localhost:8080/tcxfRestServer/cxfRest/userService/RESTService/doGet -->
-	<bean id="userService" class="com.tci.derek.tcxfRestServer.service.RESTServiceImpl" />
-	<jaxrs:server id="restServiceContainer" address="/userService"><!-- This is the url suffix, service destination -->
+	<!-- http://localhost:8080/tcxfRestServer/cxfRest/user/bean -->
+	<jaxrs:server id="restServiceContainer" address="/"><!-- This is the url suffix, service destination -->
 	    <jaxrs:serviceBeans>
 	        <ref bean="userService" />
 	    </jaxrs:serviceBeans>
