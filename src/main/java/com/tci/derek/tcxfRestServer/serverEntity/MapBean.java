@@ -9,9 +9,7 @@ public class MapBean {
     private Map<String, UserDTO> map;
 
     public Map<String, UserDTO> getMap() {
-
         return map;
-
     }
 
     public void setMap(Map<String, UserDTO> map) {

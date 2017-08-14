@@ -19,11 +19,20 @@
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>	
 
+	<!-- Data Access Objects -->
+	<context:component-scan base-package="com.tci.derek.tcxfRestServer.dao">
+		<context:include-filter type="assignable" expression="com.tci.derek.tcxfRestServer.dao.DBAccess" />
+	</context:component-scan>
+
+	<bean id="daoManager" class="com.tci.derek.tcxfRestServer.dao.DAOManager" factory-method="getInstance" />
+	
+	
+	<!-- REST Services -->
 	<bean id="userService" class="com.tci.derek.tcxfRestServer.service.UserRESTService" />
 
 	<!--Implementation for the webservice -->
-	<!-- http://localhost:8080/tcxfRestServer/cxfRest/user/bean -->
-	<jaxrs:server id="restServiceContainer" address="/"><!-- This is the url suffix, service destination -->
+	<!-- http://localhost:8181/tcxfRestServer/cxfRest/user/list -->
+	<jaxrs:server id="restServiceContainer" address="/"><!-- "/" ==> This is the url suffix, service destination -->
 	    <jaxrs:serviceBeans>
 	        <ref bean="userService" />
 	    </jaxrs:serviceBeans>
