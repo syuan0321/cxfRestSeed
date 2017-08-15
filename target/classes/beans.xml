@@ -18,7 +18,23 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml"/>
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>	
-
+	
+	<!-- Properties -->
+	<!-- Add -Denv=_dev in argument -->
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+		id="propertyConfigurer">
+		<property name="properties" ref="props" />
+	</bean>
+	<bean id="props"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location"
+			value="classpath:tcxfRestServer${env}.properties" />
+	</bean>	
+	<bean id="propertiesUtil" class="com.tci.derek.tcxfRestServer.util.PropertiesUtil" >
+		<property name="properties" ref="props" />		
+	</bean>
+	
 	<!-- Data Access Objects -->
 	<context:component-scan base-package="com.tci.derek.tcxfRestServer.dao">
 		<context:include-filter type="assignable" expression="com.tci.derek.tcxfRestServer.dao.DBAccess" />
