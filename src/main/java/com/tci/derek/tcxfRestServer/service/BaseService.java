@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response.Status;
 import javax.ws.rs.core.UriInfo;
 
 public class BaseService {
-
+	//javax ws rs Context Info
 	@Context
 	HttpServletRequest request;
 

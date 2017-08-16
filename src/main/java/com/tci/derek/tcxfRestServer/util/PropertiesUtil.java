@@ -18,6 +18,7 @@ public class PropertiesUtil implements InitializingBean{
 
 	public void afterPropertiesSet() throws Exception {
 		System.out.println(properties.getProperty("dev.property.path"));
+		System.out.println(properties.getProperty("util.name"));
 	}
 	
 	
