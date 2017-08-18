@@ -1,9 +1,10 @@
+com\tci\derek\tcxfRestServer\model\User.class
 com\tci\derek\tcxfRestServer\service\BaseService.class
 com\tci\derek\tcxfRestServer\dao\UserDAO.class
 com\tci\derek\tcxfRestServer\dao\DBAccess.class
 com\tci\derek\tcxfRestServer\serverEntity\MapBean.class
 com\tci\derek\tcxfRestServer\serverEntity\UserDTO.class
 com\tci\derek\tcxfRestServer\util\PropertiesUtil.class
+com\tci\derek\tcxfRestServer\model\ObjectBase.class
 com\tci\derek\tcxfRestServer\serverEntity\Users.class
-com\tci\derek\tcxfRestServer\service\UserRESTService.class
 com\tci\derek\tcxfRestServer\dao\DAOManager.class

@@ -3,7 +3,10 @@ C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfR
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\service\BaseService.java
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\dao\DAOManager.java
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\dao\UserDAO.java
+C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\model\ObjectBase.java
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\serverEntity\MapBean.java
+C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\model\User.java
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\serverEntity\UserDTO.java
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\service\UserRESTService.java
+C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\util\JsonDataUtil.java
 C:\eclipse-mars\derek-workspace\tcxfRestServer\src\main\java\com\tci\derek\tcxfRestServer\serverEntity\Users.java

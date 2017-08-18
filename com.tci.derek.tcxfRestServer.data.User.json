@@ -1,0 +1,1 @@
+{"type":"object","id":"urn:jsonschema:com:tci:derek:tcxfRestServer:model:User","properties":{"id":{"type":"integer"},"name":{"type":"string"},"email":{"type":"string"},"address":{"type":"string"}}}

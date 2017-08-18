@@ -12,11 +12,12 @@ public class DBAccess {
 
 	public DataSource getDataSource() {
 		return dl4DataSource;
-	}
-
+	}*/
+	
 	public void setName(String name) {
 		this.name = name;
-	}*/
+		
+	}	
 
 	public String getName() {
 		if ( name != null )

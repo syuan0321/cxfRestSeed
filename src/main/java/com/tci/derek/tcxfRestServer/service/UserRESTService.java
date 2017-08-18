@@ -19,6 +19,14 @@ import com.tci.derek.tcxfRestServer.serverEntity.Users;
 @Path("/user")
 public class UserRESTService extends BaseService{
 	@GET
+	@Path("/usersList")
+	public Response getUsersList(){
+		
+	}
+	
+	
+	
+	@GET
 	@Path("/doGet")
 	public Response doGet() {
 		return Response.status(Response.Status.OK).entity("Derek REST Get service").build();
@@ -52,7 +60,7 @@ public class UserRESTService extends BaseService{
 
     @GET
     @Path("/list")
-    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
+    @Produces({ MediaType.APPLICATION_JSON})
 	public Response getList() {
         System.out.println("####getList#####");
         System.out.println("Method:" + request.getMethod());
